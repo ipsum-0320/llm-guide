@@ -2,10 +2,8 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   "/",
-  "/portfolio",
-  "/demo/",
   {
-    text: "指南",
+    text: "LLM 入门",
     icon: "lightbulb",
     prefix: "/guide/",
     children: [
@@ -22,10 +20,5 @@ export default navbar([
         children: ["ray", { text: "...", icon: "ellipsis", link: "" }],
       },
     ],
-  },
-  {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
   },
 ]);
