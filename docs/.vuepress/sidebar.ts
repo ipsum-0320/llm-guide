@@ -11,26 +11,52 @@ export default sidebar({
   
   "/guide/": [
     {
-      text: "核心指南",
-      icon: "lightbulb",
-      prefix: "/guide/",
+      text: "RAG 技术",
+      icon: "wand-magic-sparkles",
+      prefix: "rag/",  // 添加二级前缀
+      collapsible: true,  // 使二级可折叠
+      children: [
+        {
+          text: "RAG 基础",
+          icon: "book",
+          link: "rag.md",
+          activeMatch: "/guide/rag/$"
+        },
+        {
+          text: "高级技巧",
+          icon: "star",
+          prefix: "advanced/",  // 添加三级前缀
+          collapsible: true,
+          children: [
+            {
+              text: "性能优化",
+              icon: "gauge-high",
+              link: "advanced/optimization.md"
+            },
+            {
+              text: "扩展应用",
+              icon: "puzzle-piece",
+              link: "advanced/extensions.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      text: "其他技术",
+      icon: "ellipsis",
       collapsible: true,
       children: [
         {
-          text: "快速入门",
-          icon: "rocket",
-          link: "README.md",
-          activeMatch: "/guide/$"
-        },
-        {
-          text: "RAG 技术",
-          icon: "wand-magic-sparkles",
-          link: "rag.md",
-          activeMatch: "/guide/rag"
+          text: "向量数据库",
+          icon: "database",
+          link: "vector-db.md"
         }
       ]
     }
   ],
+
+  
   
   "/resources/": [
     {
