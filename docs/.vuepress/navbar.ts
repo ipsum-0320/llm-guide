@@ -1,24 +1,22 @@
 import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
-  "/",
   {
-    text: "LLM 入门",
+    text: "🏠 首页",
+    icon: "home",
+    link: "/",
+    activeMatch: "^/$"
+  },
+  {
+    text: "📚 核心指南",
     icon: "lightbulb",
-    prefix: "/guide/",
-    children: [
-      {
-        text: "Bar",
-        icon: "lightbulb",
-        prefix: "bar/",
-        children: ["baz", { text: "...", icon: "ellipsis", link: "" }],
-      },
-      {
-        text: "Foo",
-        icon: "lightbulb",
-        prefix: "foo/",
-        children: ["ray", { text: "...", icon: "ellipsis", link: "" }],
-      },
-    ],
+    link: "/guide/",
+    activeMatch: "^/guide/",
+  },
+  {
+    text: "🛠️ 工具资源",
+    icon: "toolbox",
+    link: "/resources/",
+    activeMatch: "^/resources/"
   },
 ]);
